@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a0f1d">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Identi Analytics</title>
+  <link rel="stylesheet" href="styles.css?v=2.1.9">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">IDENTI MONITOR</div>
+        <h1>Analytics <span>V2</span></h1>
+        <p>Rendimiento histórico de tus publicaciones</p>
+      </div>
+      <div class="freshness"><span id="statusDot"></span><div><b id="updatedText">Cargando…</b><small>última exportación</small></div></div>
+    </header>
+
+    <section id="summary" class="summary"></section>
+    <section id="highlights" class="highlights"></section>
+
+    <section class="section">
+      <div class="section-head"><div><h2>Ranking</h2><p>Ordenado por puntos actuales</p></div><input id="search" type="search" placeholder="Buscar publicación…" autocomplete="off"></div>
+      <div class="table-wrap"><table><thead><tr><th>Publicación</th><th>Puntos</th><th>Visitas</th><th>Fav</th><th>Com.</th><th>Score</th><th>1h</th><th>3h</th><th>24h</th><th>Pts/100</th></tr></thead><tbody id="rankingBody"></tbody></table></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><h2>Detalle</h2><p>Seleccioná una publicación del ranking</p></div><select id="postSelect"></select></div>
+      <article id="detail" class="detail"></article>
+    </section>
+
+    <footer><span>Identi Analytics V2</span><span id="storageText"></span></footer>
+  </main>
+
+  <!-- Bootstrap rápido. app.js vuelve a consultar este archivo sin caché al iniciar y cada 60 s. -->
+  <script src="data/dashboard.js?v=2.1.9"></script>
+  <script src="app.js?v=2.1.9"></script>
+</body>
+</html>
